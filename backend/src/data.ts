@@ -1,14 +1,11 @@
 // Loads the seed dataset into memory once at startup. No DB by design.
+// Imported (not fs-read) so it bundles into the Vercel serverless function and
+// reloads under `tsx watch` when the JSON changes.
 
-import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import { dirname, join } from 'node:path';
+import carsData from '../data/cars.json' with { type: 'json' };
 import type { Car } from './types.js';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const DATA_PATH = join(__dirname, '..', 'data', 'cars.json');
-
-const cars: Car[] = JSON.parse(readFileSync(DATA_PATH, 'utf-8'));
+const cars: Car[] = carsData as Car[];
 
 /** All cars in the dataset. Read-only snapshot. */
 export function getCars(): Car[] {
