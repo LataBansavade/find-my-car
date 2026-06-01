@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/api.ts","./src/main.tsx","./src/types.ts","./src/vite-env.d.ts","./src/components/carcard.tsx","./src/components/chipgroup.tsx","./src/components/compareview.tsx","./src/components/quizform.tsx","./src/components/resultsview.tsx","./src/components/starrating.tsx"],"version":"5.9.3"}
