@@ -98,6 +98,9 @@ spend the time on logic instead of typing config.
 npm install     # installs root + auto-installs backend & frontend
 npm run dev     # boots backend (:5000) and frontend (:5173) together
 ```
+``` Frontend Env
+VITE_API_URL=http://localhost:5000
+```
 
 Then open **http://localhost:5173**.
 
